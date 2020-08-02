@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 0.1em;
 }
 a{
     text-decoration: none;
@@ -140,7 +141,7 @@ form{
     letter-spacing: 0.1em;
 }
 #slide .slide__box{
-    background: linear-gradient(180deg, #111111 25.12%, #000000 100%);
+    background: linear-gradient(180deg, #111111 50%, #000000 100%);
     padding: 15px 40px;
     margin: 20px 0;
 }
@@ -149,4 +150,74 @@ form{
 }
 #slide .slide__box img:last-child{
     margin: 0;
+}
+
+/* recommendation slide */
+#rec-slide{
+    grid-column: 1/13;
+    background-color: #121212;
+    padding: 20px 10px;
+    position: relative;
+}
+#rec-slide h2{
+    color: #F5C518;
+    font-size: 22px;
+    grid-column: 1/13;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+#rec-slide .rec-slide__box{
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
+}
+#rec-slide .rec-slide__card:nth-child(1){
+    grid-column: 1/5;
+}
+#rec-slide .rec-slide__card:nth-child(2){
+    grid-column: 5/9;
+}
+#rec-slide .rec-slide__card:nth-child(3){
+    grid-column: 9/13;
+}
+#rec-slide .rec-slide__card{
+    font-size: 14px;
+    text-align: center;
+    color: #bbb;
+}
+#rec-slide .rec-slide__card img{
+    width: 100%;
+}
+.rec-slide--prev-btn, .rec-slide--next-btn{
+    width: 70px;
+    height: 100px;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    position: absolute;
+}
+.rec-slide--prev-btn::before, .rec-slide--next-btn::before{
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("../../resources/images/icon/arrow-white.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+}
+.rec-slide--prev-btn{
+    top: 50%;
+    left: -35px;
+    transform: rotate(180deg) translateY(50%);
+}
+.rec-slide--next-btn{
+    top: 50%;
+    right: -35px;
+    transform: translateY(-50%);
 }
