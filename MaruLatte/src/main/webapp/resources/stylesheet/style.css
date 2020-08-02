@@ -41,6 +41,22 @@ form{
     overflow: hidden;
     visibility: hidden;
 }
+.link--all{
+    background-color: #F5C518;
+    color: #000;
+    width: 450px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: -25%;
+    transform: translateX(-50%);
+    line-height: 19px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* header */
 #header{
     background-color: #121212;
